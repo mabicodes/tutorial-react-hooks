@@ -11,6 +11,11 @@ const App = () => {
 
     const [usuarios, setUsuarios] = useState(datosUsuario);
 
+    const agregarUsuario = (usuario) => {
+        usuario.id = usuarios.length + 1;
+        setUsuarios([...usuarios, usuario]);
+    }
+
     return (
         <div className="container">
             <h1>Tutorial React Hooks</h1>
