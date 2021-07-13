@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
-const FormularioAgregarUsuario = (props) => {
-    const estadoInicialFormulario = {id: null, nombre: '', apellido: ''};
-    const [usuario, setUsuario] = useState(estadoInicialFormulario);
-    const gestionarCampo = (event) => {
-        const {name, value} = event.target;
-        setUsuario({...usuario, [name]: value});
-    }
 
+const FormularioAgregarUsuario = (props) => {
+
+    const estadoInicialFormulario = { id: null, nombre: '', apellido: '' };
+    const [usuario, setUsuario] = useState(estadoInicialFormulario);
+
+    const gestionarCampo = (event) => {
+        const { name, value } = event.target;
+        setUsuario({ ...usuario, [name]: value });
+    }
 
     return (
         <form
@@ -46,9 +48,6 @@ const FormularioAgregarUsuario = (props) => {
             </div>
         </form>
     )
-
-
-
 }
 
 export default FormularioAgregarUsuario;
