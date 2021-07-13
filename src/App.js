@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import TablaUsuarios from './tablas/TablaUsuario';
+import TablaUsuario from './tablas/TablaUsuario';
+import FormularioAgregarUsuario from './forms/FormularioAgregarUsuario';
 
 const App = () => {
 
@@ -22,10 +23,11 @@ const App = () => {
             <div className="row">
                 <div className="col-md-4">
                     <h2>Agregar usuario</h2>
+                    <FormularioAgregarUsuario agregarUsuario={agregarUsuario} />
                 </div>
                 <div className="col-md-4">
                     <h2>Ver usuarios</h2>
-                    <TablaUsuarios usuarios={usuarios} />
+                    <TablaUsuario usuarios={usuarios} />
                 </div>
             </div>
         </div>

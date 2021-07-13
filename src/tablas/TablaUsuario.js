@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TablaUsuarios = (props) => (
+const TablaUsuario = (props) => (
     <table className="table mt-4">
         <thead className="thead-dark">
         <tr>
@@ -30,4 +30,4 @@ const TablaUsuarios = (props) => (
     </table>
 )
 
-export default TablaUsuarios;
+export default TablaUsuario;
