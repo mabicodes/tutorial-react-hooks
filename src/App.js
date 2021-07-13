@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TablaUsuarios from './tables/TablaUsuarios';
+import TablaUsuarios from './tablas/TablaUsuario';
 
 const App = () => {
 
