@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TablaUsuario from './tablas/TablaUsuario';
 import FormularioAgregarUsuario from './forms/FormularioAgregarUsuario';
+import FormularioEditarUsuario from './forms/FormularioEditarUsuario';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
     }
     const eliminarUsuario = (id) => {
         setUsuarios(usuarios.filter((usuario) => usuario.id !== id));
+        setEditando(false);
     }
     const [editando, setEditando] = useState(false);
     const estadoInicialFormularioEdicion = { id: null, nombre: '', apellido: '' };
@@ -36,10 +38,21 @@ const App = () => {
         <div className="container">
             <h1>Tutorial React Hooks</h1>
             <div className="row">
-                <div className="col-md-4">
-                    <h2>Agregar usuario</h2>
-                    <FormularioAgregarUsuario agregarUsuario={agregarUsuario} />
-                </div>
+                {editando ? (
+                    <div className="col-md-4">
+                        <h2>Editar usuario</h2>
+                        <FormularioEditarUsuario
+                            setEditando={setEditando}
+                            usuarioActual={usuarioActual}
+                            actualizarUsuario={actualizarUsuario}
+                        />
+                    </div>
+                ) : (
+                    <div className="col-md-4">
+                        <h2>Agregar usuario</h2>
+                        <FormularioAgregarUsuario agregarUsuario={agregarUsuario} />
+                    </div>
+                )}
                 <div className="col-md-4">
                     <h2>Ver usuarios</h2>
                     <TablaUsuario usuarios={usuarios} editarUsuario={editarUsuario} eliminarUsuario={eliminarUsuario} />
