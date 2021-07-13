@@ -19,6 +19,18 @@ const App = () => {
     const eliminarUsuario = (id) => {
         setUsuarios(usuarios.filter((usuario) => usuario.id !== id));
     }
+    const [editando, setEditando] = useState(false);
+    const estadoInicialFormularioEdicion = { id: null, nombre: '', apellido: '' };
+    const [usuarioActual, setUsuarioActual] = useState(estadoInicialFormularioEdicion);
+    const editarUsuario = (usuario) => {
+        setEditando(true);
+        setUsuarioActual({ id: usuario.id, nombre: usuario.nombre, apellido: usuario.apellido });
+    }
+    const actualizarUsuario = (id, usuarioActualizado) => {
+        setEditando(false);
+        const usuariosActualizados = usuarios.map((usuario) => (usuario.id === id ? usuarioActualizado : usuario));
+        setUsuarios(usuariosActualizados);
+    }
 
     return (
         <div className="container">
@@ -30,7 +42,7 @@ const App = () => {
                 </div>
                 <div className="col-md-4">
                     <h2>Ver usuarios</h2>
-                    <TablaUsuario usuarios={usuarios} eliminarUsuario={eliminarUsuario} />
+                    <TablaUsuario usuarios={usuarios} editarUsuario={editarUsuario} eliminarUsuario={eliminarUsuario} />
                 </div>
             </div>
         </div>

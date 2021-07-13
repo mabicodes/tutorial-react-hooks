@@ -16,7 +16,10 @@ const TablaUsuario = (props) => (
                     <td>{usuario.nombre}</td>
                     <td>{usuario.apellido}</td>
                     <td>
-                        <button type="button" className="btn btn-primary btn-sm m-1">Editar</button>
+                        <button
+                            type="button"
+                            className="btn btn-primary btn-sm m-1"
+                            onClick={() => props.editarUsuario(usuario)}> Editar </button>
                         <button
                             type="button"
                             className="btn btn-primary btn-sm m-1"
