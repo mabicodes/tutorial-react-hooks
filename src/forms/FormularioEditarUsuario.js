@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const FormularioEditarUsuario = (props) => {
     const [usuario, setUsuario] = useState(props.usuarioActual);
@@ -7,6 +7,9 @@ const FormularioEditarUsuario = (props) => {
         const { name, value } = event.target;
         setUsuario({ ...usuario, [name]: value });
     }
+    useEffect(() => {
+        setUsuario(props.usuarioActual);
+    }, [props]);
 
     return (
         <form
