@@ -6,9 +6,9 @@ import FormularioEditarUsuario from './forms/FormularioEditarUsuario';
 const App = () => {
 
     const datosUsuario = [
-        { id: 1, nombre: 'Edu', apellido: 'Lázaro' },
-        { id: 2, nombre: 'Ana', apellido: 'Rodríguez' },
-        { id: 3, nombre: 'Marcos', apellido: 'González' },
+        { id: 1, nombre: 'illidanna3', apellido: 'mangaq99@hotmail.com' },
+        { id: 2, nombre: 'Road2Challenger', apellido: 'tumoritokun@gmail.com' },
+        { id: 3, nombre: 'YasuoR4Trash', apellido: 'twofingergaming@gmail.com' },
     ];
 
     const [usuarios, setUsuarios] = useState(datosUsuario);
@@ -36,11 +36,11 @@ const App = () => {
 
     return (
         <div className="container">
-            <h1>Tutorial React Hooks</h1>
+            <h1>GameINC shuffle EUW </h1>
             <div className="row">
                 {editando ? (
                     <div className="col-md-4">
-                        <h2>Editar usuario</h2>
+                        <h2>Editar</h2>
                         <FormularioEditarUsuario
                             setEditando={setEditando}
                             usuarioActual={usuarioActual}
@@ -49,12 +49,12 @@ const App = () => {
                     </div>
                 ) : (
                     <div className="col-md-4">
-                        <h2>Agregar usuario</h2>
+                        <h5>Register for FREE League of Legends skin shuffle! </h5>
                         <FormularioAgregarUsuario agregarUsuario={agregarUsuario} />
                     </div>
                 )}
                 <div className="col-md-4">
-                    <h2>Ver usuarios</h2>
+                    <h2>Registered users</h2>
                     <TablaUsuario usuarios={usuarios} editarUsuario={editarUsuario} eliminarUsuario={eliminarUsuario} />
                 </div>
             </div>

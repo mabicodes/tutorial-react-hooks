@@ -4,9 +4,9 @@ const TablaUsuario = (props) => (
     <table className="table mt-4">
         <thead className="thead-dark">
         <tr>
-            <th>Nombre</th>
-            <th>Usuario</th>
-            <th>Acciones</th>
+            <th>IGN </th>
+            <th>Email</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -19,17 +19,17 @@ const TablaUsuario = (props) => (
                         <button
                             type="button"
                             className="btn btn-primary btn-sm m-1"
-                            onClick={() => props.editarUsuario(usuario)}> Editar </button>
+                            onClick={() => props.editarUsuario(usuario)}> Edit </button>
                         <button
                             type="button"
                             className="btn btn-primary btn-sm m-1"
-                            onClick={() => props.eliminarUsuario(usuario.id)}> Eliminar </button>
+                            onClick={() => props.eliminarUsuario(usuario.id)}> Delete </button>
                     </td>
                 </tr>
             ))
         ) : (
             <tr>
-                <td colSpan={3}>No se han agregado usuarios</td>
+                <td colSpan={3}>No registry</td>
             </tr>
         )}
         </tbody>

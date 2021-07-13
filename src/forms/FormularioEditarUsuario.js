@@ -19,7 +19,7 @@ const FormularioEditarUsuario = (props) => {
             }}
         >
             <div className="form-group">
-                <label>Nombre</label>
+                <label>IGN</label>
                 <input
                     type="text"
                     name="nombre"
@@ -29,7 +29,7 @@ const FormularioEditarUsuario = (props) => {
                 />
             </div>
             <div className="form-group">
-                <label>Apellido</label>
+                <label>E-mail</label>
                 <input
                     type="text"
                     name="apellido"
@@ -39,12 +39,12 @@ const FormularioEditarUsuario = (props) => {
                 />
             </div>
             <div className="form-group">
-                <button className="btn btn-danger">Actualizar usuario</button>
+                <button className="btn btn-danger">Update</button>
                 <button
                     className="btn btn-primary ml-2"
                     onClick={() => props.setEditando(false)}
                 >
-                    Cancelar
+                    Cancel
                 </button>
             </div>
         </form>

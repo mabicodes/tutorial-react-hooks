@@ -22,7 +22,7 @@ const FormularioAgregarUsuario = (props) => {
             }}
         >
             <div className="form-group">
-                <label>Nombre</label>
+                <label>IGN</label>
                 <input
                     id="nombre"
                     className="form-control"
@@ -33,7 +33,7 @@ const FormularioAgregarUsuario = (props) => {
                 />
             </div>
             <div className="form-group">
-                <label>Apellido</label>
+                <label>E-mail</label>
                 <input
                     id="apellido"
                     className="form-control"
@@ -44,7 +44,7 @@ const FormularioAgregarUsuario = (props) => {
                 />
             </div>
             <div className="form-group">
-                <button type="submit" className="btn btn-primary">Agregar usuario</button>
+                <button type="submit" className="btn btn-primary">Register</button>
             </div>
         </form>
     )
