@@ -16,6 +16,9 @@ const App = () => {
         usuario.id = usuarios.length + 1;
         setUsuarios([...usuarios, usuario]);
     }
+    const eliminarUsuario = (id) => {
+        setUsuarios(usuarios.filter((usuario) => usuario.id !== id));
+    }
 
     return (
         <div className="container">
@@ -27,7 +30,7 @@ const App = () => {
                 </div>
                 <div className="col-md-4">
                     <h2>Ver usuarios</h2>
-                    <TablaUsuario usuarios={usuarios} />
+                    <TablaUsuario usuarios={usuarios} eliminarUsuario={eliminarUsuario} />
                 </div>
             </div>
         </div>

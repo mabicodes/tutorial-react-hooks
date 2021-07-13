@@ -17,7 +17,10 @@ const TablaUsuario = (props) => (
                     <td>{usuario.apellido}</td>
                     <td>
                         <button type="button" className="btn btn-primary btn-sm m-1">Editar</button>
-                        <button type="button" className="btn btn-primary btn-sm m-1">Eliminar</button>
+                        <button
+                            type="button"
+                            className="btn btn-primary btn-sm m-1"
+                            onClick={() => props.eliminarUsuario(usuario.id)}> Eliminar </button>
                     </td>
                 </tr>
             ))
